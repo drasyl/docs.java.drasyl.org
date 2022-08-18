@@ -33,7 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/drasyl-overlay/docs.drasyl.org/',
+          editUrl: 'https://github.com/drasyl-overlay/docs.drasyl.org/blob/master',
           lastVersion: '0.8',
           versions: {
             current: {
