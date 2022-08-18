@@ -12,7 +12,6 @@ Once the node is set up, it and therefore your application can participate in th
 Create a new maven project and add the dependency to your [pom.xml](http://maven.apache.org/pom.html):
 
 Maven:
-
 ```xml title="pom.xml"
 <repositories>
     <repository>
@@ -37,7 +36,6 @@ Maven:
 ```
 
 Other Dependency Managers:
-
 ```
 Gradle : compile "org.drasyl:drasyl-node:0.9.0-SNAPSHOT" // build.gradle 
    Ivy : <dependency org="org.drasyl" name="drasyl-node" rev="0.9.0-SNAPSHOT" conf="build" /> // ivy.xml
