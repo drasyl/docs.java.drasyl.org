@@ -12,22 +12,6 @@ Once the node is set up, it and therefore your application can participate in th
 Create a new maven project and add the dependency to your [pom.xml](http://maven.apache.org/pom.html):
 
 Maven:
-
-```xml title="pom.xml"
-<repositories>
-    <repository>
-        <id>oss.sonatype.org-snapshot</id>
-        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        <releases>
-            <enabled>false</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
-</repositories>
-```
-
 ```xml title="pom.xml"
 <dependency>
     <groupId>org.drasyl</groupId>
