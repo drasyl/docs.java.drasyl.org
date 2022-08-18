@@ -120,6 +120,10 @@ const config = {
                 label: 'Blog',
                 href: 'https://drasyl.org/blog',
               },
+              {
+                label: 'Network Explorer',
+                href: 'https://drasyl.network',
+              },
             ],
           },
           {
