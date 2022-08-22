@@ -13,7 +13,7 @@ Maven:
 <dependency>
     <groupId>ch.qos.logback</groupId>
     <artifactId>logback-classic</artifactId>
-    <version>1.2.3</version>
+    <version>1.2.11</version>
 </dependency>
 ```
 
