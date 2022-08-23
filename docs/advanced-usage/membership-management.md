@@ -17,7 +17,7 @@ The `CyclonView` object passed to the handlers contains the local (partial) view
 By calling `view.getNeighbors()` you will get a list of currently known neighbors and their corresponding addresses.
 Please refer to the above-mentioned paper for choosing proper view size and shuffle size values.
 
-```java
+```java title="MembershipManagement.java"
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.nio.NioEventLoopGroup;
