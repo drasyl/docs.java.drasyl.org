@@ -1,3 +1,6 @@
+---
+sidebar_position: 20
+---
 # Publish/Subscribe Messaging
 
 Publish/Subscribe is messaging pattern where senders of messages (a so-called publisher) do not directly send messages to specific receivers (so-called subscriber).

@@ -1,3 +1,6 @@
+---
+sidebar_position: 40
+---
 # Membership Management
 
 On this page we show you how to integrate the gossip-based membership management protocol CYCLON.

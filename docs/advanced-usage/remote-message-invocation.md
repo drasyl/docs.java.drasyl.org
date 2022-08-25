@@ -1,3 +1,6 @@
+---
+sidebar_position: 30
+---
 # Remote Message Invocation
 
 This page shows you how to invoke remote objects served by other drasyl nodes.
