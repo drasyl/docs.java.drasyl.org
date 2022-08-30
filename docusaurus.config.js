@@ -71,8 +71,8 @@ const config = {
           },
           {
             href: 'https://github.com/drasyl-overlay/drasyl',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
           },
         ],
       },
