@@ -14,6 +14,24 @@ If you would like to learn mor about this protocl, please refer to this paper:
 > 
 > [https://doi.org/10.1007/s10922-005-4441-x](https://doi.org/10.1007/s10922-005-4441-x)
 
+### Add Dependency
+
+Maven:
+```xml title="pom.xml"
+<dependency>
+    <groupId>org.drasyl</groupId>
+    <artifactId>drasyl-extras</artifactId>
+    <version>0.9.0-SNAPSHOT</version>
+</dependency>
+```
+
+Other dependency managers:
+```
+Gradle : compile "org.drasyl:drasyl-extras:0.9.0-SNAPSHOT" // build.gradle 
+   Ivy : <dependency org="org.drasyl" name="drasyl-extras" rev="0.9.0-SNAPSHOT" conf="build" /> // ivy.xml
+   SBT : libraryDependencies += "org.drasyl" % "drasyl-extras" % "0.9.0-SNAPSHOT" // build.sbt
+```
+
 To use this protocol, you have to use the [bootstrapping interface](./bootstrapping.md), where you have to customize the server channel's ChannelInitializer.
 Below you find a code snippet with a customized initializer including the Chord related handlers.
 The `CyclonView` object passed to the handlers contains the local (partial) view of the network.
@@ -41,9 +59,9 @@ public class MembershipManagement {
         // highlight-end
 
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup())
+                .group(new DefaultEventLoopGroup())
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity, 0) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity, new NioEventLoopGroup(1), 0) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);

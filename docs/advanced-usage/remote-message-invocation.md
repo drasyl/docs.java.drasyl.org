@@ -8,6 +8,24 @@ This feature is similar to [Java Remote Message Invocation](https://en.wikipedia
 
 To use this feature, you have to use the [bootstrapping interface](./bootstrapping.md), where you have to customize the server channel's ChannelInitializer.
 
+### Add Dependency
+
+Maven:
+```xml title="pom.xml"
+<dependency>
+    <groupId>org.drasyl</groupId>
+    <artifactId>drasyl-extras</artifactId>
+    <version>0.9.0-SNAPSHOT</version>
+</dependency>
+```
+
+Other dependency managers:
+```
+Gradle : compile "org.drasyl:drasyl-extras:0.9.0-SNAPSHOT" // build.gradle 
+   Ivy : <dependency org="org.drasyl" name="drasyl-extras" rev="0.9.0-SNAPSHOT" conf="build" /> // ivy.xml
+   SBT : libraryDependencies += "org.drasyl" % "drasyl-extras" % "0.9.0-SNAPSHOT" // build.sbt
+```
+
 ## Creating the Server
 
 There are two steps needed to create a remote message invocation (RMI) server:
@@ -85,9 +103,9 @@ public class RmiServer {
 
         // bootstrap node with server added to the pipeline
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup())
+                .group(new DefaultEventLoopGroup())
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity, 22527) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity, new NioEventLoopGroup(1), 22527) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);
@@ -156,9 +174,9 @@ public class RmiClient {
 
         // bootstrap node with client added to the pipeline
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup())
+                .group(new DefaultEventLoopGroup())
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity, 0) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity,new NioEventLoopGroup(1), 0) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);

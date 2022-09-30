@@ -14,6 +14,24 @@ If you would like to learn mor about this protocl, please refer to this paper:
 
 To use this feature, you have to use the [bootstrapping interface](./bootstrapping.md), where you have to customize the server channel's [ChannelInitializer](https://netty.io/4.0/api/io/netty/channel/ChannelInitializer.html).
 
+### Add Dependency
+
+Maven:
+```xml title="pom.xml"
+<dependency>
+    <groupId>org.drasyl</groupId>
+    <artifactId>drasyl-extras</artifactId>
+    <version>0.9.0-SNAPSHOT</version>
+</dependency>
+```
+
+Other dependency managers:
+```
+Gradle : compile "org.drasyl:drasyl-extras:0.9.0-SNAPSHOT" // build.gradle 
+   Ivy : <dependency org="org.drasyl" name="drasyl-extras" rev="0.9.0-SNAPSHOT" conf="build" /> // ivy.xml
+   SBT : libraryDependencies += "org.drasyl" % "drasyl-extras" % "0.9.0-SNAPSHOT" // build.sbt
+```
+
 ## Establish Chord Circle
 
 Chord constructs a distributed has table where each node is responsible for data items belonging to a partial keyspace.
@@ -44,9 +62,9 @@ public class ChordCircleNode {
         final IdentityPublicKey contact = /* code */;
 
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup())
+                .group(new DefaultEventLoopGroup())
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity, 0) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity, new NioEventLoopGroup(1), 0) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);
@@ -115,9 +133,9 @@ public class ChordLookupNode {
         final IdentityPublicKey contact = /* code */;
 
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup())
+                .group(new DefaultEventLoopGroup())
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity, new NioEventLoopGroup(1)) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);

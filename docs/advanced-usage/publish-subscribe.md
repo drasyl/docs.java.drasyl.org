@@ -10,6 +10,24 @@ This broker keeps track of each subsciber's interests and will forward published
 On this page, you will learn how this messagging pattern is used with drasyl.
 We provide ready-to-use broker, subscriber, and publisher components for simple topic-based communication.
 
+### Add Dependency
+
+Maven:
+```xml title="pom.xml"
+<dependency>
+    <groupId>org.drasyl</groupId>
+    <artifactId>drasyl-extras</artifactId>
+    <version>0.9.0-SNAPSHOT</version>
+</dependency>
+```
+
+Other dependency managers:
+```
+Gradle : compile "org.drasyl:drasyl-extras:0.9.0-SNAPSHOT" // build.gradle 
+   Ivy : <dependency org="org.drasyl" name="drasyl-extras" rev="0.9.0-SNAPSHOT" conf="build" /> // ivy.xml
+   SBT : libraryDependencies += "org.drasyl" % "drasyl-extras" % "0.9.0-SNAPSHOT" // build.sbt
+```
+
 ## Broker
 
 The first thing we need to do is create a broker.
@@ -28,9 +46,9 @@ public class Broker {
         final Identity identity = /* code */;
 
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup())
+                .group(new DefaultEventLoopGroup())
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity, 22527) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity, new NioEventLoopGroup(1), 22527) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);
@@ -68,9 +86,9 @@ public class Subscriber {
         final DrasylAddress brokerAddress = /* code */;
 
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup())
+                .group(new DefaultEventLoopGroup())
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity, 0) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity, new NioEventLoopGroup(1), 0) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);
@@ -144,9 +162,9 @@ public class Publisher {
         final DrasylAddress brokerAddress = /* code */;
 
         final ServerBootstrap b = new ServerBootstrap()
-                .group(new NioEventLoopGroup(1))
+                .group(new DefaultEventLoopGroup(1))
                 .channel(DrasylServerChannel.class)
-                .handler(new TraversingDrasylServerChannelInitializer(identity, 0) {
+                .handler(new TraversingDrasylServerChannelInitializer(identity, new NioEventLoopGroup(1), 0) {
                     @Override
                     protected void initChannel(final DrasylServerChannel ch) {
                         super.initChannel(ch);
