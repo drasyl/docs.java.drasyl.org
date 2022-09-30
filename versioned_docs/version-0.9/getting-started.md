@@ -13,33 +13,18 @@ Create a new maven project and add the dependency to your [pom.xml](http://maven
 
 Maven:
 ```xml title="pom.xml"
-<repositories>
-    <repository>
-        <id>oss.sonatype.org-snapshot</id>
-        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        <releases>
-            <enabled>false</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
-</repositories>
-```
-
-```xml title="pom.xml"
 <dependency>
     <groupId>org.drasyl</groupId>
     <artifactId>drasyl-node</artifactId>
-    <version>0.10.0-SNAPSHOT</version>
+    <version>0.9.0</version>
 </dependency>
 ```
 
 Other Dependency Managers:
 ```
-Gradle : compile "org.drasyl:drasyl-node:0.10.0-SNAPSHOT" // build.gradle 
-   Ivy : <dependency org="org.drasyl" name="drasyl-node" rev="0.10.0-SNAPSHOT" conf="build" /> // ivy.xml
-   SBT : libraryDependencies += "org.drasyl" % "drasyl-node" % "0.10.0-SNAPSHOT" // build.sbt
+Gradle : compile "org.drasyl:drasyl-node:0.9.0" // build.gradle 
+   Ivy : <dependency org="org.drasyl" name="drasyl-node" rev="0.9.0" conf="build" /> // ivy.xml
+   SBT : libraryDependencies += "org.drasyl" % "drasyl-node" % "0.9.0" // build.sbt
 ```
 
 ## Implementing `DrasylNode`
