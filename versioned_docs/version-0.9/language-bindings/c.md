@@ -36,7 +36,7 @@ With the library setup, `libdrasyl` can then be used by first creating an isolat
 #include "libdrasyl.h"
 
 int main() {
-	// highlight-start
+    // highlight-start
     graal_isolate_t *isolate = NULL;
     graal_isolatethread_t *thread = NULL;
 
@@ -69,7 +69,7 @@ void on_drasyl_event(graal_isolatethread_t* thread, drasyl_event_t* event) {
 int main() {
     /* code */
 
-	// highlight-start
+    // highlight-start
     char config[] = "my-node.conf";
     if (drasyl_node_init(thread, config, sizeof(config), &on_drasyl_event) != DRASYL_SUCCESS) {
         fprintf(stderr, "could not init node\n");
@@ -103,7 +103,7 @@ It is now time to start the node, wait for it to come online, and then send a me
 int main() {
     /* code */
 
-	// highlight-start
+    // highlight-start
     if (drasyl_node_start(thread) != DRASYL_SUCCESS) {
         fprintf(stderr, "could not start node\n");
         return DRASYL_ERROR_GENERAL;
@@ -141,7 +141,7 @@ If the node is no longer needed, it can be shutdown. Finally, we need to shutdow
 int main() {
     /* code */
 
-	// highlight-start
+    // highlight-start
     if (drasyl_node_stop(thread) != DRASYL_SUCCESS) {
         fprintf(stderr, "could not stop node\n");
         return DRASYL_ERROR_GENERAL;
