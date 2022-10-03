@@ -1,0 +1,8 @@
+{
+  "label": "Language Bindings",
+  "position": 70,
+  "link": {
+    "type": "generated-index",
+    "description": "We provide bindings for different programming languages so you can use drasyl in your preferred language."
+  }
+}
