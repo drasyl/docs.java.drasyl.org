@@ -92,5 +92,5 @@ The manager stores all groups, nodes and their memberships in memory. To persist
 file system, `database.uri` can be set to `jdbc:sqlite:groups-manager.sqlite`.
 
 An overview of all available parameters (e.g. to enable the REST API), their purpose and default values can be found in the
-plugin's [reference.conf](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-plugin-groups-manager/src/main/resources/reference.conf)
+plugin's [reference.conf](https://github.com/drasyl/drasyl/blob/master/drasyl-plugin-groups-manager/src/main/resources/reference.conf)
 file.

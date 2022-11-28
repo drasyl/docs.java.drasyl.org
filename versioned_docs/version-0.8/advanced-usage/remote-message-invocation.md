@@ -213,7 +213,7 @@ public class RmiClient {
 
 ## Example
 
-A fully working example can be found [here](https://github.com/drasyl-overlay/drasyl/tree/master/drasyl-examples/src/main/java/org/drasyl/example/rmi).
+A fully working example can be found [here](https://github.com/drasyl/drasyl/tree/master/drasyl-examples/src/main/java/org/drasyl/example/rmi).
 
 ## Further Reading
 

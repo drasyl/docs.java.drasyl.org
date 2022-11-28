@@ -139,4 +139,4 @@ This operation cannot be undone. After performing this operation, now new node c
 
 ## Example
 
-A fully functional example can be found in our [GitHub Repository](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/examples/python/example.py).
+A fully functional example can be found in our [GitHub Repository](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/examples/python/example.py).

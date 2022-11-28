@@ -160,4 +160,4 @@ A [`NodeNormalTerminationEvent`](https://api.drasyl.org/master/org/drasyl/node/e
 
 In this chapter, we had a quick tour of drasyl with a demonstration on how to create a node, start and stop it, send messages, and process emitted events.
 
-Have a look at [our examples](https://github.com/drasyl-overlay/drasyl/tree/master/drasyl-examples) to see how drasyl can be used for different scenarios.
+Have a look at [our examples](https://github.com/drasyl/drasyl/tree/master/drasyl-examples) to see how drasyl can be used for different scenarios.

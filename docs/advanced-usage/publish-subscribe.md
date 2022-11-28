@@ -211,4 +211,4 @@ public class Publisher {
 ## Example
 
 A working example can be found
-in our [examples section](https://github.com/drasyl-overlay/drasyl/tree/master/drasyl-examples/src/main/java/org/drasyl/example/pubsub).
+in our [examples section](https://github.com/drasyl/drasyl/tree/master/drasyl-examples/src/main/java/org/drasyl/example/pubsub).

@@ -136,4 +136,4 @@ public class Bootstrapping {
 ## Example
 
 A fully working example can be found
-here: [EchoServerBootstrap](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-examples/src/main/java/org/drasyl/example/echo/EchoServerBootstrap.java)
+here: [EchoServerBootstrap](https://github.com/drasyl/drasyl/blob/master/drasyl-examples/src/main/java/org/drasyl/example/echo/EchoServerBootstrap.java)

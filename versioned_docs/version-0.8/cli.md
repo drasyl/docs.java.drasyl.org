@@ -6,7 +6,7 @@ sidebar_position: 50
 It is possible to run drasyl from the command line using the `drasyl` command.
 The `drasyl` command makes it possible to start up drasyl nodes, generate identities, and more directly from the command line.
 
-You can download the `drasyl` command from [GitHub](https://github.com/drasyl-overlay/drasyl/releases).
+You can download the `drasyl` command from [GitHub](https://github.com/drasyl/drasyl/releases).
 The download includes a `bin/drasyl` executable for Linux/macOS users and a `bin/drasyl.bat` for Windows users.
 
 Run `drasyl help` to get an overview of available commands and flags:
@@ -70,7 +70,7 @@ This command passes the just generated identity to the docker container and then
 The `drasyl` command can also be downloaded with [Homebrew](https://brew.sh/):
 
 ```bash
-$ brew install drasyl-overlay/tap/drasyl
+$ brew install drasyl/tap/drasyl
 ```
 
 ## Chocolatey
