@@ -14,11 +14,11 @@ Using the [GraalVM](https://www.graalvm.org/dev/reference-manual/native-image/gu
 
 ## Installation
 
-You can grab the latest `libdrasyl.so`, `libdrasyl.dylib`, or `libdrasyl.dll` alongside with the header files `drasyl.h`, `libdrasyl.h`, and `graal_isolate.h` from our [GitHub releases page](https://github.com/drasyl-overlay/drasyl/releases/latest).
+You can grab the latest `libdrasyl.so`, `libdrasyl.dylib`, or `libdrasyl.dll` alongside with the header files `drasyl.h`, `libdrasyl.h`, and `graal_isolate.h` from our [GitHub releases page](https://github.com/drasyl/drasyl/releases/latest).
 For our Linux and macOS users, we suggest installing `libdrasyl` through [Homebrew](https://brew.sh/):
 
 ```bash
-brew install drasyl-overlay/tap/libdrasyl
+brew install drasyl/tap/libdrasyl
 ```
 
 ## Usage
@@ -162,7 +162,7 @@ int main() {
 
 ## Reference
 
-Reference information about the typedefs declared by the `drasyl.h` header file is provided within the file (you can also refer [here](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h)).
+Reference information about the typedefs declared by the `drasyl.h` header file is provided within the file (you can also refer [here](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h)).
 
 The functions defined by `libdrasyl.h` are mainly one-to-one bindings to the according Java-Methods of the [`DrasylNode`](https://api.drasyl.org/v0.9/org/drasyl/node/DrasylNode.html) Java class.
 
@@ -173,14 +173,14 @@ The functions defined by `libdrasyl.h` are mainly one-to-one bindings to the acc
 Returns the version of the drasyl node currently loaded.
 Most four significant bytes represent the major version.
 The following four bytes represent the minor version and are followed by another four bytes representing the patch version. The least significant four bytes are unused.
-If the version could not be retrieved, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the version could not be retrieved, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 ### drasyl_set_logger
 
 `int drasyl_set_logger(graal_isolatethread_t* thread, void * logger)`
 
 Sets logger callback function.
-If the logger could not be set, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the logger could not be set, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 #### Parameters
 * `logger`: Must have the following signature: `void (graal_isolatethread_t* thread, int level, unsigned long time, char* message)`.
@@ -190,7 +190,7 @@ If the logger could not be set, this function returns [`DRASYL_ERROR_GENERAL`](h
 `int drasyl_node_init(graal_isolatethread_t* thread, char* config, size_t config_len, void * listener)`
 
 Creates a new [`DrasylNode`](https://api.drasyl.org/v0.9/org/drasyl/node/DrasylNode.html).
-If the node could not be created, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the node could not be created, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 #### Parameters
 * `config`: File path to a [node configuration](../configuration/overview#use-applicationconf-file). Set to `NULL` to use default configuration.
@@ -203,7 +203,7 @@ If the node could not be created, this function returns [`DRASYL_ERROR_GENERAL`]
 
 Returns the node identity.
 Must be called after `drasyl_node_init`.
-If the identity could not be retrieved, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the identity could not be retrieved, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 ### drasyl_node_start
 
@@ -211,7 +211,7 @@ If the identity could not be retrieved, this function returns [`DRASYL_ERROR_GEN
 
 Starts the node.
 Must be called after `drasyl_node_init`.
-If the node could not be started, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the node could not be started, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 ### drasyl_node_stop
 
@@ -219,7 +219,7 @@ If the node could not be started, this function returns [`DRASYL_ERROR_GENERAL`]
 
 Stops the node.
 Must be called after `drasyl_node_init`.
-If the node could not be stopped, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the node could not be stopped, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 ### drasyl_node_send
 
@@ -227,7 +227,7 @@ If the node could not be stopped, this function returns [`DRASYL_ERROR_GENERAL`]
 
 Sends a message `payload` to `recipient`.
 Must be called after `drasyl_node_init`.
-If the recipient does not acknowledge the receival of the message, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the recipient does not acknowledge the receival of the message, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 #### Parameters
 * `recipient`: The recipient as 64 hex characters long drasyl address.
@@ -253,8 +253,8 @@ Causes the currently executing thread to sleep for the specified number of milli
 
 Shutdown all (if any) threads implicity created that are used by the drasyl node.
 This operation cannot be undone. After performing this operation, now new node can be started!
-If the threads could not be shut down, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
+If the threads could not be shut down, this function returns [`DRASYL_ERROR_GENERAL`](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/src/main/c/drasyl.h).
 
 ## Example
 
-A fully functional example can be found in our [GitHub Repository](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-shared-library/examples/c/example.c).
+A fully functional example can be found in our [GitHub Repository](https://github.com/drasyl/drasyl/blob/master/drasyl-shared-library/examples/c/example.c).

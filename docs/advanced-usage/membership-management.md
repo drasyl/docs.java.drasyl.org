@@ -86,4 +86,4 @@ public class MembershipManagement {
 ## Example
 
 A fully working example can be found
-here: [CyclonMembershipManagement](https://github.com/drasyl-overlay/drasyl/blob/master/drasyl-examples/src/main/java/org/drasyl/example/cyclon/CyclonMembershipManagement.java)
+here: [CyclonMembershipManagement](https://github.com/drasyl/drasyl/blob/master/drasyl-examples/src/main/java/org/drasyl/example/cyclon/CyclonMembershipManagement.java)

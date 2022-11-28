@@ -6,7 +6,7 @@ sidebar_position: 10
 
 ![drasyl architecture](./drasyl-architecture.svg)
 
-drasyl [dʁazy:l] is an [open-source](https://github.com/drasyl-overlay/drasyl) general-purpose
+drasyl [dʁazy:l] is an [open-source](https://github.com/drasyl/drasyl) general-purpose
 overlay network framework for rapid development of distributed P2P applications.
 
 By using drasyl developers can fully concentrate on creating distributed applications. With drasyl,

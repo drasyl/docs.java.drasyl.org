@@ -15,7 +15,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'drasyl-overlay', // Usually your GitHub org/user name.
+  organizationName: 'drasyl', // Usually your GitHub org/user name.
   projectName: 'drasyl', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -33,7 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/drasyl-overlay/docs.drasyl.org/blob/master',
+          editUrl: 'https://github.com/drasyl/docs.drasyl.org/blob/master',
           lastVersion: '0.9',
           versions: {
             current: {
@@ -70,7 +70,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/drasyl-overlay/drasyl',
+            href: 'https://github.com/drasyl/drasyl',
             position: 'right',
             className: 'header-github-link',
           },
@@ -88,7 +88,7 @@ const config = {
               },
               {
                 label: 'Example Applications',
-                href: 'https://github.com/drasyl-overlay/drasyl/tree/master/drasyl-examples',
+                href: 'https://github.com/drasyl/drasyl/tree/master/drasyl-examples',
               },
               {
                 label: 'Javadoc',
@@ -101,7 +101,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/drasyl-overlay/drasyl/',
+                href: 'https://github.com/drasyl/drasyl/',
               },
               {
                 label: 'Docker',
@@ -131,11 +131,11 @@ const config = {
             items: [
               {
                 label: 'Changelog',
-                href: 'https://github.com/drasyl-overlay/drasyl/blob/master/CHANGELOG.md',
+                href: 'https://github.com/drasyl/drasyl/blob/master/CHANGELOG.md',
               },
               {
                 label: 'Contributing',
-                href: 'https://github.com/drasyl-overlay/drasyl/blob/master/CONTRIBUTING.md',
+                href: 'https://github.com/drasyl/drasyl/blob/master/CONTRIBUTING.md',
               },
               {
                 label: 'Statuspage',

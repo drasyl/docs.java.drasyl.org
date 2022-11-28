@@ -184,4 +184,4 @@ channel.write(ChordLookup.of(contact, ChordUtil.chordId("ubuntu.iso"))).addListe
 
 ## Example
 
-A fully working example can be found [here](https://github.com/drasyl-overlay/drasyl/tree/master/drasyl-examples/src/main/java/org/drasyl/example/chord).
+A fully working example can be found [here](https://github.com/drasyl/drasyl/tree/master/drasyl-examples/src/main/java/org/drasyl/example/chord).
