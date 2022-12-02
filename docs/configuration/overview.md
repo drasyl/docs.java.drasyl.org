@@ -51,7 +51,7 @@ the [`DrasylNode` constructor](https://api.drasyl.org/master/org/drasyl/node/Dra
 
 You can add a resource called `application.conf` to your java classpath to provide a custom config used by all your nodes.
 This file has to use the [HOCON Syntax](https://github.com/lightbend/config/blob/master/HOCON.md).
-The file only needs to contain the parameters you want to overwrite because it will be merged with the default values found in [reference.conf](https://github.com/drasyl/drasyl/blob/master/drasyl-core/src/main/resources/reference.conf).
+The file only needs to contain the parameters you want to overwrite because it will be merged with the default values found in [reference.conf](https://github.com/drasyl/drasyl/blob/master/drasyl-node/src/main/resources/reference.conf).
 
 ```hocon title="application.conf"
 drasyl.identity.path = /Users/heiko/drasyl.identity
