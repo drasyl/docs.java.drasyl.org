@@ -43,7 +43,7 @@ The environment variable JAVA_OPTS can be used to pass options to the JVM.
 
 ## Docker
 
-The [`drasyl/drasyl`](https://hub.docker.com/r/drasyl/drasyl) image provides the `drasyl` command to the host. So no need to install drasyl on your machine, you can just use this docker image.
+The [`drasyl/drasyl`](https://hub.docker.com/r/drasyl/drasyl) image provides the `drasyl` command. So no need to install drasyl on your machine.
 
 For instance:
 
