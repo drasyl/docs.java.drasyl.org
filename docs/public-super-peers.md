@@ -40,5 +40,5 @@ Therefore, if you are using `DrasylNode` make sure that `drasyl.remote.message.a
 
 ### Hamburg, Germany
 ```
-udp://134.100.14.149:22527?publicKey=c909a27d9ec0127c57142c3e1547ba9f82bc605277380b2a8fc0fabafe2be4c9&networkId=2
+udp://sp-ham1.test.drasyl.org:22527?publicKey=c909a27d9ec0127c57142c3e1547ba9f82bc605277380b2a8fc0fabafe2be4c9&networkId=2
 ```
