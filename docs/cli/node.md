@@ -52,7 +52,7 @@ Usage: drasyl node [--activity-pattern=<file>] [-c=<file>] [--rc-bind=<host>[:
 
 ### HTTP API
 
-If the command is run with the `--rc-jsonrpc-http` or flag then it starts an HTTP server which can be used to remote control the node using its API.
+If the command is run with the `--rc-jsonrpc-http` flag then it starts an HTTP server which can be used to remote control the node using its API.
 
 #### Start Node
 
