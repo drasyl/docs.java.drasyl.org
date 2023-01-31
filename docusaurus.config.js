@@ -34,10 +34,10 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/drasyl/docs.drasyl.org/blob/master',
-          lastVersion: '0.9',
+          lastVersion: '0.10',
           versions: {
             current: {
-              label: '0.10 (nightly) 🚧',
+              label: '0.11 (nightly) 🚧',
               path: 'master',
             },
             // '0.7': {
