@@ -37,8 +37,7 @@ This class contains the following methods that are now relevant for you:
   allows your application to send arbitrary messages to other drasyl nodes.
 * [`onEvent(...)`](https://api.drasyl.org/master/org/drasyl/node/DrasylNode.html#onEvent(org.drasyl.node.event.Event)):
   allows your application to react to certain events (e.g. process received messages, connection to the network established/lost). This method must be implemented.
-* [`start()`](https://api.drasyl.org/master/org/drasyl/node/DrasylNode.html#start()):
-* starts the node, which will then automatically connect to the drasyl network.
+* [`start()`](https://api.drasyl.org/master/org/drasyl/node/DrasylNode.html#start()): starts the node, which will then automatically connect to the drasyl network.
 * [`shutdown()`](https://api.drasyl.org/master/org/drasyl/node/DrasylNode.html#shutdown()):
   disconnects from the drasyl network and shuts down the node.
  
