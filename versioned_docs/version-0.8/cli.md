@@ -17,18 +17,26 @@ drasyl Command Line Interface: A collection of utilities for drasyl.
 
 Usage: drasyl [COMMAND]
 
-  genidentity  Generates and outputs a new identity
-  help         Displays help information about the specified command
-  node         Runs a drasyl node
-  perf         Tool for measuring network performance
-  pubkey       Dervices the public key and prints it to standard output from a
-                 private key given on standard input
-  tunnel       Expose safely local networked services behind through NATs and
-                 firewalls to other computers
-  version      Shows the drasyl version number, the java version, and the
-                 architecture
-  wormhole     Transfer a text message or file from one computer to another,
-                 safely and through NATs and firewalls
+  generate-completion  Generate bash/zsh completion script for drasyl.
+  generate-identity    Generate and output a new identity.
+  generate-pow         Generate and outputs a new proof of work for a given
+                         public key.
+  help                 Display help information about the specified command.
+  node                 Run a drasyl node.
+  node-rc              Remote controlling a node.
+  perf                 Tool for measuring network performance.
+  pubkey               Dervices the public key and prints it to standard output
+                         from a private key given on standard input.
+  tun                  Create a local network interface routing traffic to
+                         given peers.
+  tun-rc               Remote controlling a network interface created by the
+                         "tun" command.
+  tunnel               Expose safely local networked services behind through
+                         NATs and firewalls to other computers.
+  version              Shows the drasyl version number, the java version, and
+                         the architecture.
+  wormhole             Transfer a text message or file from one computer to
+                         another, safely and through NATed firewalls.
 
 The environment variable JAVA_OPTS can be used to pass options to the JVM.
 ```
@@ -55,7 +63,7 @@ $ docker run -i -t drasyl/drasyl version
 To run a node:
 ```bash
 # generate an identity (this can take some time)
-$ docker run -i -t drasyl/drasyl genidentity | grep -v "WARNING:" > drasyl.identity
+$ docker run -i -t drasyl/drasyl generate-identitytity | grep -v "WARNING:" > drasyl.identity
 
 # start a node
 $ docker run -i -t -p 22527:22527 \
