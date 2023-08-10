@@ -63,7 +63,7 @@ $ docker run -i -t drasyl/drasyl version
 To run a node:
 ```bash
 # generate an identity (this can take some time)
-$ docker run -i -t drasyl/drasyl generate-identitytity | grep -v "WARNING:" > drasyl.identity
+$ docker run -i -t drasyl/drasyl generate-identity | grep -v "WARNING:" > drasyl.identity
 
 # start a node
 $ docker run -i -t -p 22527:22527 \
