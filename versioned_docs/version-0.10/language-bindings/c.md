@@ -18,7 +18,7 @@ You can grab the latest `libdrasyl.so`, `libdrasyl.dylib`, or `libdrasyl.dll` al
 For our Linux and macOS users, we suggest installing `libdrasyl` through [Homebrew](https://brew.sh/):
 
 ```bash
-brew install zerotier/tap/libzt
+brew install drasyl/tap/libdrasyl
 ```
 
 ## Usage
