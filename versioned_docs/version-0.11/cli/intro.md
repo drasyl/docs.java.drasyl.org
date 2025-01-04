@@ -82,7 +82,7 @@ This command passes the just generated identity to the docker container and then
 The `drasyl` command can also be downloaded with [Homebrew](https://brew.sh/):
 
 ```bash
-$ brew install --HEAD drasyl/tap/drasyl
+$ brew install drasyl/tap/drasyl
 ```
 
 ## Chocolatey
