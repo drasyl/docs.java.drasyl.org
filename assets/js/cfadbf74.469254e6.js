@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_new=self.webpackChunkdocs_new||[]).push([[4242],{419:e=>{e.exports=JSON.parse('{"title":"Plugins","slug":"/category/plugins","permalink":"/category/plugins","navigation":{"previous":{"title":"Logging","permalink":"/configuration/logging"},"next":{"title":"Groups","permalink":"/plugins/groups"}}}')}}]);
