@@ -17,15 +17,15 @@ Maven:
 <dependency>
     <groupId>org.drasyl</groupId>
     <artifactId>drasyl-extras</artifactId>
-    <version>0.13.0-SNAPSHOT</version>
+    <version>0.11.0-SNAPSHOT</version>
 </dependency>
 ```
 
 Other dependency managers:
 ```
-Gradle : compile "org.drasyl:drasyl-extras:0.13.0-SNAPSHOT" // build.gradle 
-   Ivy : <dependency org="org.drasyl" name="drasyl-extras" rev="0.13.0-SNAPSHOT" conf="build" /> // ivy.xml
-   SBT : libraryDependencies += "org.drasyl" % "drasyl-extras" % "0.13.0-SNAPSHOT" // build.sbt
+Gradle : compile "org.drasyl:drasyl-extras:0.11.0-SNAPSHOT" // build.gradle 
+   Ivy : <dependency org="org.drasyl" name="drasyl-extras" rev="0.11.0-SNAPSHOT" conf="build" /> // ivy.xml
+   SBT : libraryDependencies += "org.drasyl" % "drasyl-extras" % "0.11.0-SNAPSHOT" // build.sbt
 ```
 
 ## Broker
