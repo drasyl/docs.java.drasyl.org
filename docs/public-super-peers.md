@@ -12,12 +12,6 @@ By default, all drasyl nodes are configured to use the main network's super peer
 
 This network has the id `1`.
 
-### Baden-Baden, Germany (FKB 1)
-
-```
-udp://sp-fkb1.drasyl.org:22527?publicKey=c0900bcfabc493d062ecd293265f571edb70b85313ba4cdda96c9f77163ba62d&networkId=1
-```
-
 ### Logroño, Spain (RJL 1)
 ```
 udp://sp-rjl1.drasyl.org:22527?publicKey=5b4578909bf0ad3565bb5faf843a9f68b325dd87451f6cb747e49d82f6ce5f4c&networkId=1
