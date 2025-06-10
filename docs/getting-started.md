@@ -150,6 +150,7 @@ public class GettingStarted {
             public void onEvent(final Event event) {
                 // highlight-start
                 if (event instanceof MessageEvent) {
+                    final MessageEvent message = (MessageEvent) event;
                     System.out.println("Message received from " + message.getSender() + " with payload " + message.getPayload());
                 }
                 // highlight-end
