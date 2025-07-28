@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'drasyl',
-  url: 'https://docs.drasyl.org',
+  url: 'https://docs.java.drasyl.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -33,7 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/drasyl/docs.drasyl.org/blob/master',
+          editUrl: 'https://github.com/drasyl/docs.java.drasyl.org/blob/master',
           lastVersion: '0.12',
           versions: {
             current: {
