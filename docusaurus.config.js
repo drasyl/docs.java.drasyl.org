@@ -151,6 +151,14 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['java']
       },
+      announcementBar: {
+        id: 'drasyl-java-documentation', // einzigartig
+        content:
+          '⚠️ <strong>IMPORTANT:</strong> This is <strong>drasyl-java</strong> (formerly drasyl). drasyl now refers to our new SDN solution. Visit <a href="https://drasyl.org" style="color: #ffffff; text-decoration: underline; font-weight: bold;">drasyl.org</a>',
+        backgroundColor: '#ff6b35',
+        textColor: '#ffffff',
+        isCloseable: false,
+      },
     }),
         themes: [
             // ... Your other themes.
@@ -163,12 +171,7 @@ const config = {
                 },
             ],
         ],
-        scripts: [
-            {
-                src: '/js/custom-admonition.js',
-                async: true,
-            },
-        ],
+        scripts: [],
 };
 
 module.exports = config;
