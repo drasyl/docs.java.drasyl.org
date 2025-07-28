@@ -163,6 +163,12 @@ const config = {
                 },
             ],
         ],
+        scripts: [
+            {
+                src: '/js/custom-admonition.js',
+                async: true,
+            },
+        ],
 };
 
 module.exports = config;
