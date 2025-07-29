@@ -105,7 +105,7 @@ const config = {
               },
               {
                 label: 'Docker',
-                href: 'https://hub.docker.com/r/drasyl/drasyl',
+                href: 'https://hub.docker.com/r/drasyl/drasyl-java',
               },
             ],
           },

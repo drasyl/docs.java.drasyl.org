@@ -43,12 +43,12 @@ The environment variable JAVA_OPTS can be used to pass options to the JVM.
 
 ## Docker
 
-The [`drasyl/drasyl`](https://hub.docker.com/r/drasyl/drasyl) image provides the `drasyl` command. So no need to install drasyl on your machine.
+The [`drasyl/drasyl-java`](https://hub.docker.com/r/drasyl/drasyl-java) image provides the `drasyl` command. So no need to install drasyl on your machine.
 
 For instance:
 
 ```bash
-$ docker run -i -t drasyl/drasyl version
+$ docker run -i -t drasyl/drasyl-java version
 - drasyl-cli.version 0.8.0 (a773985)
 - drasyl-core.version 0.8.0 (a773985)
 - drasyl-node.version 0.8.0 (a773985)
@@ -63,12 +63,12 @@ $ docker run -i -t drasyl/drasyl version
 To run a node:
 ```bash
 # generate an identity (this can take some time)
-$ docker run -i -t drasyl/drasyl generate-identity | grep -v "WARNING:" > drasyl.identity
+$ docker run -i -t drasyl/drasyl-java generate-identity | grep -v "WARNING:" > drasyl.identity
 
 # start a node
 $ docker run -i -t -p 22527:22527 \
     -v $PWD/drasyl.identity:/drasyl.identity \
-    drasyl/drasyl node
+    drasyl/drasyl-java node
 ```
 
 This command passes the just generated identity to the docker container and then launch the `drasyl node` command.
